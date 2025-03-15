@@ -1,0 +1,26 @@
+{
+  "name": "playable-template-base-js",
+  "version": "1.0.0",
+  "description": "A starter template for creating playable ads using @smoud/playable-sdk with JavaScript",
+  "scripts": {
+    "dev": "playable-scripts dev",
+    "build": "playable-scripts build"
+  },
+  "keywords": [
+    "playable",
+    "ads",
+    "template",
+    "javascript",
+    "game",
+    "interactive",
+    "sdk"
+  ],
+  "author": "Smoud",
+  "dependencies": {
+    "@smoud/playable-sdk": "^1.0.8"
+  },
+  "devDependencies": {
+    "@smoud/playable-scripts": "^1.0.15",
+    "prettier": "^2.7.1"
+  }
+}
