@@ -1,4 +1,4 @@
-# Base Playable Template
+# Base Playable Template (JavaScript)
 
 A starter template for creating playable ads with JavaScript. This template uses:
 

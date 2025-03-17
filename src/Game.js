@@ -6,8 +6,7 @@ export class Game {
   constructor(width, height) {
     // Create game container
     this.container = document.createElement('div');
-    this.container.style.cssText =
-      'position: relative; display: flex; align-items: center; justify-content: center; background-color: rgb(28, 28, 28);';
+    this.container.style.cssText = 'position: absolute; top: 0px; left: 0px; background-color: rgb(28, 28, 28);';
     this.container.style.width = `${width}px`;
     this.container.style.height = `${height}px`;
 
@@ -24,18 +23,18 @@ export class Game {
 
   create() {
     this.installButton = document.createElement('div');
-    this.installButton.style.cursor = 'pointer';
+    this.installButton.style.cssText = 'position: absolute;cursor: pointer; width: 200px; transform-origin: top left;';
     this.installButton.onclick = () => sdk.install();
 
     // Add image
-    this.buttonImage.width = 200;
+    this.buttonImage.style.width = '100%';
     this.installButton.appendChild(this.buttonImage);
 
     // Add text overlay
     const text = document.createElement('div');
     text.textContent = 'Install';
     text.style.cssText =
-      'position: absolute;top: 50%;left: 50%;transform: translate(-50%, -58%);color: rgb(255 255 255);font-size: 35px;font-weight: bold;text-shadow: rgb(255 252 106 / 63%) 4px 3px 9px;pointer-events: none;font-family: cursive;';
+      'position: absolute;top: 50%;left: 50%;transform: translate(-50%, -58%); color: rgb(255 255 255);font-size: 35px;font-weight: bold;text-shadow: rgb(255 252 106 / 63%) 4px 3px 9px;pointer-events: none;font-family: cursive;';
     this.installButton.appendChild(text);
 
     this.container.appendChild(this.installButton);
@@ -61,7 +60,9 @@ export class Game {
     const scaleY = height / 480;
     const scale = Math.min(scaleX, scaleY); // Use smaller scale to fit both dimensions
 
-    this.installButton.style.transform = `scale(${scale})`;
+    this.installButton.style.transform = `scale(${scale}) translate(-50%, -50%)`;
+    this.installButton.style.left = `${width / 2}px`;
+    this.installButton.style.top = `${height / 2}px`;
   }
 
   pause() {
