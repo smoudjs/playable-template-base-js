@@ -17,10 +17,10 @@
   ],
   "author": "Smoud",
   "dependencies": {
-    "@smoud/playable-sdk": "^1.0.20"
+    "@smoud/playable-sdk": "^1.0.23"
   },
   "devDependencies": {
-    "@smoud/playable-scripts": "^1.0.29",
+    "@smoud/playable-scripts": "^1.1.0",
     "prettier": "^2.7.1"
   }
 }
